@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 100% 96%;
+    --foreground: 18 36% 21%;
+    --card: 0 0% 100%;
+    --card-foreground: 18 36% 21%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 18 36% 21%;
+    --primary: 37 82% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 351 61% 30%;
+    --secondary-foreground: 36 100% 96%;
+    --muted: 36 30% 94%;
+    --muted-foreground: 351 61% 30%;
+    --accent: 78 52% 57%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 351 61% 30% / 0.15;
+    --input: 351 61% 30% / 0.05;
+    --ring: 37 82% 51%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased selection:bg-brand-gold selection:text-white;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M200 0c110.457 0 200 89.543 200 200s-89.543 200-200 200S0 310.457 0 200 89.543 0 200 0zm0 20c-99.411 0-180 80.589-180 180s80.589 180 180 180 180-80.589 180-180S299.411 20 200 20zm0 40c77.32 0 140 62.68 140 140s-62.68 140-140 140-140-62.68-140-140 62.68-140 140-140z' fill='%237B1E2B' fill-opacity='0.03'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+@keyframes pendulum {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.animate-pendulum {
+  animation: pendulum 5s ease-in-out infinite;
+}
+
+.gold-glow:hover {
+  box-shadow: 0 0 25px rgba(232, 155, 30, 0.5);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
