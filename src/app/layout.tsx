@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import "./globals.css"; // Points exactly to your globals.css file inside src/app/
+import type { Metadata } from "nextimport type { Metadata } from "next";
+import "@/app/globals.css"; // Pure absolute path to catch src/app/globals.css straight away!
 
 export const metadata: Metadata = {
   title: "Mithaas Lucknow",
@@ -18,4 +18,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+}￼Enter
