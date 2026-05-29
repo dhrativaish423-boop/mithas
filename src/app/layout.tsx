@@ -1,4 +1,4 @@
-hereimport type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./globals.css"; // Points exactly to your globals.css file inside src/app/
 
 export const metadata: Metadata = {
