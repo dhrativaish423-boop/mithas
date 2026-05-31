@@ -62,19 +62,20 @@ export default function HomePage() {
       <section className="p-4 max-w-md mx-auto">
         <div className="relative w-full rounded-2xl overflow-hidden shadow-lg border border-amber-100 bg-[#FAF4E8] aspect-[4/3] cursor-pointer">
           <Image
-            src="/assets/banners/hero-thali-banner.png"
-            alt="Mithaas Top Hero Banner"
-            fill
-            priority
-            className="object-cover object-center"
-            onError={(e) => {
-              // Graceful fallback to avoid blank space if image is .jpg
-              const img = e.currentTarget as HTMLImageElement;
-              if (!img.src.endsWith('.jpg')) {
-                img.src = "/assets/banners/hero-thali-banner.jpg";
-              }
-            }}
-          />
+  src="/assets/banners/hero-thali-banner.png"
+  alt="Mithaas Top Hero Banner"
+  width={500}
+  height={320}
+  priority
+  className="w-full h-[320px] object-cover object-center"
+  onError={(e) => {
+    // Graceful fallback to avoid blank space if image is .jpg
+    const img = e.currentTarget as HTMLImageElement;
+    if (!img.src.endsWith('.jpg')) {
+      img.src = "/assets/banners/hero-thali-banner.jpg";
+    }
+  }}
+/>
         </div>
       </section>
 
